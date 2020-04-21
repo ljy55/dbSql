@@ -114,7 +114,7 @@ ROWNUM의 특징
     ROWNUM BETWEEN 1 AND 10 ==> 1~10
     ROWNUM BETWEEN 11 AND 20 ==> 1~10을 SKIP하고 11~20을 읽으려고 시도
 
-    WHERE절에서 ROWNUM을 상요할 경우 다음 형태
+    WHERE절에서 ROWNUM을 사용할 경우 다음 형태
     ROWNUM = 1;
     ROWNUM BETWEEN 1 AND N;
     ROWNUM <, <= N (1-N)

@@ -196,8 +196,4 @@ from dual;
 select to_date(to_char(sysdate,'yyyymm') || '01' , 'yyyymmdd')
 from dual;
 
---fn3
-select to_char(to_date('201912','yyyymm'),'yyyymm') as param,
-
-from dual;
 

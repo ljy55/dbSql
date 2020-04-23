@@ -124,7 +124,7 @@ null에 대한 연산결과는 null이다
 select empno, ename, sal, comm, sal + comm as sal_plus_com
 from emp;
 
-NVN(expr1, expr2)
+NVl(expr1, expr2)
 expr1이 null이면 expr2값을 리턴하고
 expr1이 null이 아니면 expr1을 리턴
 

@@ -125,7 +125,7 @@ EXEC printemp(7698);
 
 --실습PRO_2
 
-CREATE OR  REPLACE PROCEDURE registdept_test (p_deptno IN dept_test.deptno%TYPE, 
+CREATE OR REPLACE PROCEDURE registdept_test (p_deptno IN dept_test.deptno%TYPE, 
                                               p_dname IN dept_test.dname%TYPE, 
                                               p_loc IN dept_test.loc%TYPE ) IS
 
@@ -142,15 +142,18 @@ FROM dept_test;
 
 --실습PRO_3 : 과제
 
-CREATE OR  REPLACE PROCEDURE UPDATEdept_test (p_dname IN dept_test.dname%TYPE) IS
+CREATE OR REPLACE PROCEDURE UPDATEdept_test (p_deptno IN dept_test.deptno%TYPE, 
+                                              p_dname IN dept_test.dname%TYPE, 
+                                              p_loc IN dept_test.loc%TYPE ) IS
 
 BEGIN
-   UPDATE UPDATEdept_test SET dname = p_dname; 
-    COMMIT;
+   UPDATE dept_test SET deptno = p_deptno, dname = p_dname, loc = p_loc
+   WHERE deptno = p_deptno;
+   
 END;
 /
 
-EXEC UPDATEdept_test (99, 'ddit', 'daejeon');
+EXEC UPDATEdept_test (99, 'ddit_m', 'daejeon');
 
 SELECT *
 FROM dept_test;
